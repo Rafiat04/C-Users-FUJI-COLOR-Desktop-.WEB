@@ -1,0 +1,139 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('istockphoto-1348369701-612x612.jpg'); 
+    background-size: cover;
+    min-height: 120vh;
+    align-items: center;
+    justify-content: center;
+}
+.navbar {
+    background: rgba(255, 255, 255, 0.2); /* Transparent white background */
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    backdrop-filter: blur(10px); /* Add the glass blur effect */
+}
+.navbar-logo {
+    font-size: 26px;
+    font-weight: bold;
+    color: rgb(164, 168, 180);
+    letter-spacing: 2px
+}
+.navbar-links {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    font-size: 21px;
+}
+
+.navbar-link {
+    margin-right: 20px;
+    position: relative;
+}
+.navbar-link a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.navbar-link a::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: white;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease-in-out;
+}
+
+.navbar-link a:hover {
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.navbar-link a:hover::before {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+.nav-link {
+    cursor: pointer;
+}
+
+.nav-link.active {
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+}
+.nav-link {
+    cursor: pointer;
+}
+
+.nav-link.active {
+    background-color: #333;
+    color: #fff;
+    border-radius: 4px;
+}
+.mita h1{
+  text-align: center;
+}
+.image-container {
+    backdrop-filter: blur(10px); /* Apply a blur effect to the container */
+    background: rgba(255, 255, 255, 0.2); /* Add a semi-transparent background to make the images stand out */
+    padding: 20px; /* Add some padding around the images */
+    display: inline-block; /* Make the container as wide as its content */
+    white-space: nowrap; /* Prevent line breaks in case of small screens */
+    overflow-x: auto; /* Add horizontal scrolling if the content overflows */
+}
+.images img {
+    max-width: 100%;
+    display: none;
+}
+
+
+/* Style the images container */
+.images {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    height: 300px; /* Set a fixed height for the container */
+}
+
+/* Style the individual images */
+.images img {
+    max-width: 100%;
+    display: none;
+}
+.image-container{
+    margin-top: 5%;
+    margin-left: 15%;
+}
+.mi{
+    align-items: center;
+    margin-left: 40%;
+    margin-top: 3%;
+}
+h4{
+    text-align: center;
+}
+.image-container {
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    opacity: 0; /* Start with opacity set to 0 */
+    animation: fadeIn 2s forwards; /* Fade in and stop at full opacity */
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}

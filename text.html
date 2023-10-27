@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Electronics and Robotics Club Of Adamjeee</title>
+    </head>
+<body>
+    <div class="navbar">
+        <div class="navbar-logo">ERA</div>
+                <ul class="navbar-links">
+                    <li class="navbar-link"><a href="/text.html">Home</a></li>
+                    <li class="navbar-link"><a href="/About.html">Activities</a></li>
+                    <li class="navbar-link"><a href="/picture.html">Pictures</a></li>
+                    <li class="navbar-link"><a href="/panelists.html">Panelists</a></li>
+                    <li class="navbar-link"><a href="/join.html">join us</a></li>
+                </ul>
+            </div>
+            
+            <script>
+                // JavaScript function to change the text when a navigation link is clicked
+                function changeText(element) {
+                    const newText = prompt("Enter new text for this link:");
+                    if (newText !== null) {
+                        element.textContent = newText;
+                    }
+                }
+            </script>
+   <div class="ha">
+    <h1>Welcome !</h1>
+   </div>
+   <section class="sec" id="Home">
+   <div id="auto-typing"></div>
+    <div id="logos-container">
+        <img class="logo" src="logo1.png" alt="">
+        <img class="logo" src="logo2.png" alt="">
+    </div>
+    <div id="additional-content">
+        <h6>Electronics and Robotics Club Of Adamjeee #A new era begins</h6>
+    </div>
+    <script>
+        const lines = [
+"Welcome to Electronics & Robotics club of Adamjee! We are a community of ",
+"students and robotics enthusiasts who come together to design,build and program ",
+"robots.Our club provides supportive environment where members can learn about  ",
+"robotics,develop new skills,and participate in robotics to inspire innovation  ",
+"and creativity,and we are committed sharing our passion with others.For why we ",
+"created that.Whether you are a beginner or an experienced robotics enthusiast,we",
+"invite you to join us and become part of our community.We ensure that you will  ",
+"                      get fun and happness when you work with us.",
+"So Why are you waiting,Come and explore the exciting world of robotics with us!" ];
+        const typingSpeed = 10; // Adjust the typing speed (milliseconds per character)
+
+        let lineIndex = 0;
+        let charIndex = 0;
+        const autoTyping = document.getElementById("auto-typing");
+        const logosContainer = document.getElementById("logos-container");
+        const additionalContent = document.getElementById("additional-content");
+
+        const autoType = () => {
+            if (lineIndex < lines.length) {
+                if (charIndex < lines[lineIndex].length) {
+                    autoTyping.innerHTML += lines[lineIndex].charAt(charIndex);
+                    charIndex++;
+                    setTimeout(autoType, typingSpeed);
+                } else {
+                    // Move to the next line
+                    autoTyping.innerHTML += "<br>";
+                    charIndex = 0;
+                    lineIndex++;
+                    setTimeout(autoType, typingSpeed);
+                }
+            } else {
+                // Display the logos and additional content when the text is fully typed
+                logosContainer.style.display = "flex";
+                additionalContent.style.display = "flex";
+            }
+        }
+
+        // Start the auto-typing process
+        autoType();
+    </script>
+    </section>
+    <script src="/script.js"></script>
+    </body>
+</html>
+
+
